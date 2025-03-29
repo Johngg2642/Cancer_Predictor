@@ -175,7 +175,7 @@ def add_predictions(input_data):
         )
     else:
         st.markdown(
-            "<h3 style='color: red;'>The cell cluster is: Malignant</h3>",
+            "<h3 style='color: red;'>The cell cluster is: Malicious</h3>",
             unsafe_allow_html=True,
         )
 
@@ -188,7 +188,7 @@ def add_predictions(input_data):
     st.progress(probabilities[0])  # Progress bar for benign probability
 
     st.markdown(
-        f"<p style='color: red;'>Probability of being Malignant: {probabilities[1] * 100:.2f}%</p>",
+        f"<p style='color: red;'>Probability of being Malicious: {probabilities[1] * 100:.2f}%</p>",
         unsafe_allow_html=True,
     )
     st.progress(probabilities[1])  # Progress bar for malignant probability
